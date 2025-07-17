@@ -10,6 +10,8 @@ import WhyCalibration from './pages/WhyCalibration'
 import FleetCollision from './pages/FleetCollision'
 import FAQ from './pages/FAQ'
 import Contact from './pages/Contact'
+import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import FloatingCTA from './components/FloatingCTA'
 
 function App() {
@@ -30,6 +32,8 @@ function App() {
             <Route path="/fleet-collision-shops" element={<FleetCollision />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </motion.main>
         <Footer />

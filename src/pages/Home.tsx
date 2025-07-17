@@ -1,220 +1,319 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import { CheckCircle, Shield, Clock, MapPin, Phone, ArrowRight } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { Shield, Zap, Users, CheckCircle, Star, ArrowRight, Phone, Mail } from 'lucide-react'
+import AnimatedSection from '../components/AnimatedSection'
 
 const Home = () => {
-  const services = [
-    'Static ADAS Calibration',
-    'Dynamic Calibration',
-    'Post-Collision Calibration',
-    'Lane Keep Assist',
-    'Blind Spot Systems',
-    'Radar & Camera Recalibration'
+  const features = [
+    {
+      icon: Shield,
+      title: 'Certified Technicians',
+      description: 'Factory-trained experts with the latest ADAS calibration equipment and techniques.'
+    },
+    {
+      icon: Zap,
+      title: 'Fast Turnaround',
+      description: 'Most calibrations completed same-day with minimal disruption to your schedule.'
+    },
+    {
+      icon: Users,
+      title: 'Fleet Services',
+      description: 'Specialized programs for collision centers and fleet operators throughout NJ.'
+    }
   ]
 
-  const serviceAreas = [
-    { city: 'Neptune', state: 'NJ', description: 'Professional ADAS calibration services in Neptune, New Jersey' },
-    { city: 'Cinnaminson', state: 'NJ', description: 'Expert ADAS recalibration in Cinnaminson, New Jersey' },
-    { city: 'Philadelphia', state: 'PA', description: 'Collision ADAS reset services in Philadelphia, Pennsylvania' }
+  const services = [
+    'Static ADAS Calibration',
+    'Dynamic Road Testing',
+    'Pre & Post Collision Scans',
+    'Windshield Replacement Calibration',
+    'Fleet Calibration Programs',
+    'Emergency Mobile Service'
+  ]
+
+  const testimonials = [
+    {
+      name: 'Mike Johnson',
+      company: 'Neptune Auto Body',
+      text: 'NJ ADAS has been our go-to calibration partner for over a year. Their technicians are professional, fast, and always get it right the first time.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Chen',
+      company: 'Cinnaminson Collision',
+      text: 'The partnership with NJ ADAS has allowed us to offer complete collision repair services. Our customers love the convenience.',
+      rating: 5
+    },
+    {
+      name: 'David Rodriguez',
+      company: 'Fleet Manager, Philadelphia',
+      text: 'Managing ADAS calibration for our 50+ vehicle fleet was a nightmare until we found NJ ADAS. They handle everything seamlessly.',
+      rating: 5
+    }
   ]
 
   return (
-    <>
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 section-padding">
-        <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 via-gray-900 to-black" />
+        <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10" />
+        
+        <div className="container-max relative z-10 text-center">
+          <AnimatedSection>
+            <motion.h1 
+              className="text-6xl md:text-7xl lg:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent leading-tight"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                Certified <span className="text-primary-400">ADAS Calibration</span> Services in NJ & Philadelphia
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Static & dynamic sensor calibration for post-collision, glass replacement, and dealer compliance. Professional service with OEM-grade equipment.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact" className="btn-primary inline-flex items-center justify-center">
-                  Schedule Your Calibration
-                  <ArrowRight className="ml-2" size={20} />
-                </Link>
-                <a href="tel:(732)555-0123" className="btn-secondary inline-flex items-center justify-center">
-                  <Phone className="mr-2" size={20} />
-                  Call Now
-                </a>
-              </div>
-            </motion.div>
+              NJ ADAS
+            </motion.h1>
+            <motion.p 
+              className="text-2xl md:text-3xl text-gray-300 mb-6 font-light"
+            >
+              Advanced Driver Assistance System Calibration
+            </motion.p>
+            <motion.p 
+              className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+            >
+              Professional ADAS calibration services for Neptune, Cinnaminson, and Philadelphia areas. 
+              Ensuring your safety systems work perfectly after collision repair or windshield replacement.
+            </motion.p>
             
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <img
-                src="https://images.pexels.com/photos/3806288/pexels-photo-3806288.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="ADAS calibration equipment and modern vehicle"
-                className="rounded-lg shadow-2xl"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-lg"></div>
-            </motion.div>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                href="/contact"
+                className="btn-primary inline-flex items-center space-x-3 text-lg"
+              >
+                <span>Get Free Quote</span>
+                <ArrowRight size={20} />
+              </motion.a>
+              <motion.a
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.95 }}
+                href="tel:(732)555-0123"
+                className="btn-secondary inline-flex items-center space-x-3 text-lg"
+              >
+                <Phone size={20} />
+                <span>Call Now</span>
+              </motion.a>
+            </div>
+          </AnimatedSection>
         </div>
+
+        {/* Floating Elements */}
+        <motion.div
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-20 left-10 w-20 h-20 bg-primary-600/20 rounded-full blur-xl"
+        />
+        <motion.div
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          className="absolute bottom-20 right-10 w-32 h-32 bg-accent-600/20 rounded-full blur-xl"
+        />
       </section>
 
-      {/* Services Overview */}
-      <section className="section-padding bg-gray-800">
+      {/* Features Section */}
+      <section className="section-padding bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="container-max">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our ADAS Calibration Services</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive calibration services for all major vehicle manufacturers and ADAS systems
+          <AnimatedSection className="text-center mb-20">
+            <h2 className="text-5xl font-bold text-white mb-6">
+              Why Choose NJ ADAS?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              We're New Jersey's premier ADAS calibration specialists, combining cutting-edge technology 
+              with unmatched expertise to keep your safety systems operating flawlessly.
             </p>
-          </motion.div>
+          </AnimatedSection>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <motion.div
-                key={service}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-700 p-6 rounded-lg hover:bg-gray-600 transition-colors duration-300"
-              >
-                <CheckCircle className="text-primary-400 mb-4" size={24} />
-                <h3 className="text-lg font-semibold mb-2">{service}</h3>
-                <p className="text-gray-300">Professional calibration with OEM-grade equipment and certified technicians.</p>
-              </motion.div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {features.map((feature, index) => (
+              <AnimatedSection key={feature.title} delay={index * 0.2}>
+                <motion.div
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 hover:border-primary-500/50 transition-all duration-300 h-full"
+                >
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-700 rounded-2xl flex items-center justify-center mb-6"
+                  >
+                    <feature.icon size={32} className="text-white" />
+                  </motion.div>
+                  <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{feature.description}</p>
+                </motion.div>
+              </AnimatedSection>
             ))}
           </div>
-
-          <div className="text-center mt-12">
-            <Link to="/services" className="btn-primary">
-              View All Services
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
+      {/* Services Section */}
       <section className="section-padding">
         <div className="container-max">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose NJADAS?</h2>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Shield className="text-primary-400 mt-1" size={24} />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Certified Technicians</h3>
-                    <p className="text-gray-300">Our team is certified and trained on the latest ADAS technologies and calibration procedures.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Clock className="text-primary-400 mt-1" size={24} />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Fast Turnaround</h3>
-                    <p className="text-gray-300">Most calibrations completed within 2-4 hours, getting vehicles back on the road quickly.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <MapPin className="text-primary-400 mt-1" size={24} />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Mobile Service Available</h3>
-                    <p className="text-gray-300">On-site calibration services for collision shops and fleet operators.</p>
-                  </div>
-                </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <AnimatedSection direction="left">
+              <h2 className="text-5xl font-bold text-white mb-8">
+                Complete ADAS Solutions
+              </h2>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                From static calibration to dynamic road testing, we provide comprehensive ADAS services 
+                that ensure your vehicle's safety systems meet manufacturer specifications.
+              </p>
+              
+              <div className="grid sm:grid-cols-2 gap-4 mb-8">
+                {services.map((service, index) => (
+                  <motion.div
+                    key={service}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-center space-x-3"
+                  >
+                    <CheckCircle size={20} className="text-primary-400 flex-shrink-0" />
+                    <span className="text-gray-300">{service}</span>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <img
-                src="https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Professional ADAS calibration technician at work"
-                className="rounded-lg shadow-xl"
-              />
-            </motion.div>
+              
+              <Link to="/services" className="btn-primary inline-flex items-center space-x-2">
+                <span>View All Services</span>
+                <ArrowRight size={20} />
+              </Link>
+            </AnimatedSection>
+
+            <AnimatedSection direction="right">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="relative"
+              >
+                <img
+                  src="https://images.pexels.com/photos/3807277/pexels-photo-3807277.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="ADAS Calibration Equipment"
+                  className="rounded-2xl shadow-2xl"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent rounded-2xl" />
+              </motion.div>
+            </AnimatedSection>
           </div>
         </div>
       </section>
 
       {/* Coverage Areas */}
-      <section className="section-padding bg-gray-800">
+      <section className="section-padding bg-gradient-to-r from-primary-900/20 to-accent-900/20">
         <div className="container-max">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Service Coverage Areas</h2>
-            <p className="text-xl text-gray-300">Professional ADAS calibration services across New Jersey and Philadelphia</p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {serviceAreas.map((area, index) => (
-              <motion.div
-                key={`${area.city}-${area.state}`}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-gray-700 p-6 rounded-lg text-center hover:bg-gray-600 transition-colors duration-300"
-              >
-                <MapPin className="text-primary-400 mx-auto mb-4" size={32} />
-                <h3 className="text-2xl font-bold mb-2">{area.city}, {area.state}</h3>
-                <p className="text-gray-300">{area.description}</p>
-              </motion.div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <Link to="/coverage-areas" className="btn-primary">
-              View Coverage Details
+          <AnimatedSection className="text-center">
+            <h2 className="text-5xl font-bold text-white mb-8">
+              Serving New Jersey & Beyond
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              We provide mobile ADAS calibration services throughout central New Jersey and the greater Philadelphia area.
+            </p>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              {['Neptune, NJ', 'Cinnaminson, NJ', 'Philadelphia, PA'].map((location, index) => (
+                <motion.div
+                  key={location}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.2 }}
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
+                >
+                  <h3 className="text-2xl font-bold text-white mb-2">{location}</h3>
+                  <p className="text-gray-300">Full-service ADAS calibration available</p>
+                </motion.div>
+              ))}
+            </div>
+            
+            <Link to="/coverage-areas" className="btn-secondary inline-flex items-center space-x-2">
+              <span>View All Coverage Areas</span>
+              <ArrowRight size={20} />
             </Link>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="section-padding">
+        <div className="container-max">
+          <AnimatedSection className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-white mb-6">
+              What Our Partners Say
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Don't just take our word for it. Here's what collision centers and fleet managers say about our services.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <AnimatedSection key={testimonial.name} delay={index * 0.2}>
+                <motion.div
+                  whileHover={{ y: -5 }}
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700 h-full"
+                >
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} size={20} className="text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-6 leading-relaxed italic">
+                    "{testimonial.text}"
+                  </p>
+                  <div>
+                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="text-primary-400 text-sm">{testimonial.company}</div>
+                  </div>
+                </motion.div>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-primary-600">
-        <div className="container-max text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Schedule Your ADAS Calibration?</h2>
-            <p className="text-xl mb-8 opacity-90">
-              Get your vehicle's safety systems properly calibrated by certified professionals
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-                Schedule Service
-              </Link>
-              <a href="tel:(732)555-0123" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-                Call (732) 555-0123
-              </a>
-            </div>
-          </motion.div>
+      <section className="section-padding bg-gradient-to-br from-gray-800 to-gray-900">
+        <div className="container-max">
+          <AnimatedSection>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              className="bg-gradient-to-r from-primary-600/20 to-accent-600/20 rounded-3xl p-16 text-center border border-gray-700"
+            >
+              <h2 className="text-5xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                Contact us today for professional ADAS calibration services. Fast, accurate, and reliable.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="/contact"
+                  className="btn-primary inline-flex items-center space-x-3 text-lg"
+                >
+                  <Mail size={20} />
+                  <span>Get Free Quote</span>
+                </motion.a>
+                <motion.a
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  href="tel:(732)555-0123"
+                  className="btn-secondary inline-flex items-center space-x-3 text-lg"
+                >
+                  <Phone size={20} />
+                  <span>(732) 555-0123</span>
+                </motion.a>
+              </div>
+            </motion.div>
+          </AnimatedSection>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 
