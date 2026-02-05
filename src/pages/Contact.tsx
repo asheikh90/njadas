@@ -153,7 +153,7 @@ const Contact = () => {
                   >
                     <option value="">Select your location</option>
                     <option value="neptune-nj">Neptune, NJ</option>
-                    <option value="cinnaminson-nj">Cinnaminson, NJ</option>
+                    <option value="woodbury-nj">Woodbury, NJ</option>
                     <option value="philadelphia-pa">Philadelphia, PA</option>
                     <option value="mobile-service">Mobile Service (On-site)</option>
                     <option value="other">Other Location</option>
@@ -200,8 +200,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Phone</h3>
-                    <a href="tel:(732)555-0123" className="text-gray-300 hover:text-white">
-                      (732) 555-0123
+                    <a href="tel:(267)212-1034" className="text-gray-300 hover:text-white">
+                      (267) 212-1034
                     </a>
                     <p className="text-sm text-gray-400">Call or text for immediate assistance</p>
                   </div>
@@ -214,7 +214,7 @@ const Contact = () => {
                   <div>
                     <h3 className="text-lg font-semibold mb-1">Email</h3>
                     <a href="mailto:info@njadas.com" className="text-gray-300 hover:text-white">
-                      info@njadas.com
+                      info@drivecal.com
                     </a>
                     <p className="text-sm text-gray-400">We respond within 2 hours</p>
                   </div>
@@ -228,7 +228,7 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold mb-1">Service Areas</h3>
                     <div className="text-gray-300">
                       <p>Neptune, NJ</p>
-                      <p>Cinnaminson, NJ</p>
+                      <p>Cherry Hill, NJ</p>
                       <p>Philadelphia, PA</p>
                     </div>
                     <p className="text-sm text-gray-400">Mobile service available</p>
@@ -255,14 +255,14 @@ const Contact = () => {
                 <h3 className="text-xl font-semibold mb-4">Need Immediate Service?</h3>
                 <div className="space-y-3">
                   <a
-                    href="tel:(732)555-0123"
+                    href="tel:(267)212-1034"
                     className="w-full bg-primary-600 hover:bg-primary-700 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
                   >
                     <Phone className="mr-2" size={20} />
                     Call Now
                   </a>
                   <a
-                    href="sms:(732)555-0123"
+                    href="sms:(267)212-1034"
                     className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center"
                   >
                     <Mail className="mr-2" size={20} />
@@ -296,7 +296,7 @@ const Contact = () => {
                 <MapPin className="text-primary-400 mx-auto mb-4" size={48} />
                 <p className="text-xl font-semibold mb-2">Service Area Map</p>
                 <p className="text-gray-300">
-                  Serving Neptune NJ, Cinnaminson NJ, and Philadelphia PA
+                  Serving Neptune NJ, Cherry Hill NJ, and Philadelphia PA
                 </p>
                 <p className="text-sm text-gray-400 mt-2">
                   Mobile service available within 50-mile radius
