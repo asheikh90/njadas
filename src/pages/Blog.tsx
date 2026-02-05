@@ -136,7 +136,7 @@ const Blog = () => {
                 Need Professional ADAS Calibration?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-                Our certified technicians provide expert ADAS calibration services throughout Neptune, Cinnaminson, and Philadelphia areas.
+               Our main office is located at 1101 Route 33, Neptune, NJ, and we provide mobile ADAS calibration services throughout all of New Jersey and Philadelphia.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.a
