@@ -63,9 +63,9 @@ const CoverageAreas = () => {
             <p className="text-xl text-gray-300 mb-8">
               Professional ADAS calibration services across New Jersey and Philadelphia. Mobile service available for collision shops and fleet operators.
             </p>
-            <a href="tel:(732)555-0123" className="btn-primary inline-flex items-center">
+            <a href="tel:(267)212-1034" className="btn-primary inline-flex items-center">
               <Phone className="mr-2" size={20} />
-              Call (732) 555-0123
+              Call (267) 212-1034
             </a>
           </motion.div>
         </div>
@@ -245,8 +245,8 @@ const CoverageAreas = () => {
               <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
                 Schedule Service
               </Link>
-              <a href="tel:(732)555-0123" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
-                Call (732) 555-0123
+              <a href="tel:(267)212-1034" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
+                Call (267) 212-1034
               </a>
             </div>
           </motion.div>
