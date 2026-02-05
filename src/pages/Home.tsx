@@ -214,7 +214,7 @@ const Home = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              {['Neptune, NJ', 'Cinnaminson, NJ', 'Philadelphia, PA'].map((location, index) => (
+              {['Neptune, NJ', 'Woodbury, NJ', 'Philadelphia, PA'].map((location, index) => (
                 <motion.div
                   key={location}
                   initial={{ opacity: 0, y: 20 }}
@@ -302,11 +302,11 @@ const Home = () => {
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  href="tel:(732)555-0123"
+                  href="tel:(267)212-1034"
                   className="btn-secondary inline-flex items-center space-x-3 text-lg"
                 >
                   <Phone size={20} />
-                  <span>(732) 555-0123</span>
+                  <span>(267) 212-1034</span>
                 </motion.a>
               </div>
             </motion.div>
